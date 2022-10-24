@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="test methodları çalıştırma">
+  <test name="otel">
+      <classes>
+
+
+          <class name="tests.day18.C02_WebTables">
+              <methods>
+                     <include name="login"></include>
+                     <include name="table"></include>
+                  <!-- method secımı yapılırken ınclude: secılırse kalanlar exclude kabul edeer
+                    exclude : yazarsan gerısını ınclude olur-->
+              </methods>
+          </class>
+
+
+          <class name="tests.day18.C01_E2ETesting">
+              <methods>
+                  <include name="createHotel"></include>
+              </methods>
+          </class>
+
+
+      </classes>
+  </test>
+</suite>
+
+        <!-- eger bır test ıcerısınde bırden fazla hıyerarsı olusturmamızı gerekırse
+        uygun krılma noktası belırleyıp oradan hıyerasrsı yenıden olusturulur -->

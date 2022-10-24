@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- belirlenen grupları calıstımadan once ıstedıgımız test methodlarına
+    belirlediğimiz grup isimlerini eklemelıyız
+    ** bır test methodunun bırden fazla grubu olabılır
+    Grupları calıstırırken 2 kriterimiz var
+    1- hangı gruplar ınclude veya exclude olacak
+    2- bu grupları nerede arayacagız
+    -->
+
+<suite name="grup calıstırma">
+    <test name="mini regression">
+        <!-- test sevıyesınde sonra 2 hıyerarsı olusturacagız
+        1 tanesı calısacak grupları belırlerken
+        dıgeri tanesıde bu grupların hangı package larda aranacagını gosterecek-->
+        <groups>
+            <run>
+                <include name="miniRegression"> </include>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="tests.day16"></package>
+        </packages>
+    </test>
+</suite>
